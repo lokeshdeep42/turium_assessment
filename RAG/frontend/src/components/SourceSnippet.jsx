@@ -8,7 +8,7 @@ function SourceSnippet({ source }) {
     };
 
     return (
-        <div className="source-snippet">
+        <div className={`source-snippet ${source.source_type}`}>
             <div className="source-header">
                 <span className="source-type">
                     {source.source_type === 'note' ? '📝 Note' : '🔗 URL'}

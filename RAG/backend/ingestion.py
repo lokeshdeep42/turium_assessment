@@ -75,6 +75,44 @@ class ContentIngestion:
             return False, "Note content too long (max 50,000 characters)"
         
         return True, None
+    
+    @staticmethod
+    def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50):
+        """
+        Split text into chunks with overlap.
+        
+        Args:
+            text: Text to chunk
+            chunk_size: Number of words per chunk
+            overlap: Number of words to overlap between chunks
+            
+        Returns:
+            List of text chunks
+        """
+        # Simple word-based chunking
+        words = text.split()
+        chunks = []
+        
+        if len(words) <= chunk_size:
+            return [text]
+        
+        start = 0
+        while start < len(words):
+            end = start + chunk_size
+            chunk_words = words[start:end]
+            chunk = ' '.join(chunk_words)
+            chunks.append(chunk)
+            
+            # Move start position with overlap
+            start = end - overlap
+            
+            # Prevent infinite loop
+            if start >= len(words):
+                break
+        
+        logger.info(f"Split text into {len(chunks)} chunks")
+        return chunks
+
 
 # Global ingestion instance
 content_ingestion = ContentIngestion()

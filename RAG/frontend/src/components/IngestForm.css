@@ -59,6 +59,7 @@
     color: #f1f5f9;
     transition: all 0.3s ease;
     font-family: inherit;
+    resize: none;
 }
 
 .ingest-form textarea::placeholder,

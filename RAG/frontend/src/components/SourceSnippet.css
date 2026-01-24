@@ -1,0 +1,103 @@
+.source-snippet {
+    background: #1e293b;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+}
+
+.source-snippet:hover {
+    border-color: #475569;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.source-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+}
+
+.source-type {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Color coding for different source types */
+.source-snippet .source-type {
+    color: #3b82f6;
+}
+
+.source-snippet.note .source-type {
+    color: #a78bfa;
+}
+
+.source-snippet.url .source-type {
+    color: #34d399;
+}
+
+.relevance-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.source-url {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    background: #0f172a;
+    border-radius: 6px;
+    border-left: 3px solid #3b82f6;
+}
+
+.source-url a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 0.85rem;
+    word-break: break-all;
+    transition: color 0.2s ease;
+}
+
+.source-url a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.source-content {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    background: #0f172a;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Scrollbar for source content */
+.source-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.source-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.source-content::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+.source-content::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}

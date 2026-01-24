@@ -6,6 +6,18 @@ A minimal production-style RAG (Retrieval-Augmented Generation) web application 
 
 ---
 
+## 📸 Screenshots
+
+### Application Interface
+![AI Knowledge Inbox Interface](screenshots/app-interface.png)
+*Main interface showing content ingestion, saved items, and the query interface*
+
+### Query Results with Sources
+![Query Results](screenshots/query-results.png)
+*AI-powered answers with source citations and relevance scores*
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -244,15 +256,44 @@ turium_assessment/
 
 ## 🧪 Testing
 
-### Manual Testing
-1. **Ingest**: Add a note and a URL
-2. **Query**: Ask questions about your content
-3. **Verify**: Check source citations and relevance scores
-4. **Filter**: Test All/Notes/URLs filters
-5. **Delete**: Remove items and verify they're gone
+### Manual Testing Workflow
+
+1. **Ingest Content**:
+   - Add a note (e.g., meeting notes, ideas)
+   - Add a URL (e.g., article, documentation)
+
+2. **Query Your Knowledge Base**:
+   - Ask questions about your saved content
+   - Verify AI answers match your sources
+   - Check relevance scores on source citations
+
+3. **Manage Items**:
+   - Filter by All/Notes/URLs
+   - View full content
+   - Delete items and verify removal
+
+### Example Test URLs
+
+The following URLs were used to test the application and are shown in the screenshots:
+
+- **AI Overview**: [IBM - What is Artificial Intelligence?](https://www.ibm.com/think/topics/artificial-intelligence)
+- **AI Future**: [The Future of Intelligence](https://latecomermag.com/article/the-future-of-intelligence/)
+
+These URLs demonstrate:
+- URL content extraction and parsing
+- Semantic search across different sources
+- AI-generated answers with proper citations
+
+### Sample Queries to Try
+
+After ingesting content, try these queries:
+- "What is artificial intelligence?"
+- "What are the key trends in AI?"
+- "Summarize the main points about [topic from your content]"
 
 ### API Testing
-Interactive docs: `http://localhost:8000/docs`
+
+Interactive API documentation: `http://localhost:8000/docs`
 
 ---
 
