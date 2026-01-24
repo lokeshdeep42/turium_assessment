@@ -1,0 +1,119 @@
+.query-interface {
+    background: #1e293b;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    border: 1px solid #334155;
+}
+
+.query-interface h2 {
+    color: #f1f5f9;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.question-input-wrapper {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.question-input-wrapper input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #475569;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #0f172a;
+    color: #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.question-input-wrapper input::placeholder {
+    color: #94a3b8;
+}
+
+.question-input-wrapper input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.question-input-wrapper button {
+    padding: 0.75rem 1.5rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.question-input-wrapper button:hover:not(:disabled) {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.question-input-wrapper button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error-message {
+    background: #7f1d1d;
+    color: #fca5a5;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+    border: 1px solid #991b1b;
+    font-size: 0.9rem;
+}
+
+.answer-section {
+    margin-top: 1rem;
+}
+
+.answer-box {
+    background: #0f172a;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+.answer-box h3 {
+    color: #3b82f6;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.answer-box p {
+    color: #e2e8f0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+}
+
+.sources-section {
+    background: #0f172a;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.sources-section h3 {
+    color: #3b82f6;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.sources-grid {
+    display: grid;
+    gap: 0.75rem;
+}

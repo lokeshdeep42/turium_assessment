@@ -1,0 +1,117 @@
+.ingest-form {
+    background: #1e293b;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    border: 1px solid #334155;
+}
+
+.ingest-form h2 {
+    color: #f1f5f9;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.source-type-toggle {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.source-type-toggle button {
+    flex: 1;
+    padding: 0.6rem;
+    border: 2px solid #475569;
+    background: #334155;
+    color: #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.source-type-toggle button:hover {
+    background: #475569;
+    transform: translateY(-2px);
+}
+
+.source-type-toggle button.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    font-weight: 600;
+}
+
+.ingest-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.ingest-form textarea,
+.ingest-form input {
+    padding: 0.75rem;
+    border: 2px solid #475569;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #0f172a;
+    color: #f1f5f9;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.ingest-form textarea::placeholder,
+.ingest-form input::placeholder {
+    color: #94a3b8;
+}
+
+.ingest-form textarea:focus,
+.ingest-form input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.ingest-form button[type="submit"] {
+    padding: 0.75rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ingest-form button[type="submit"]:hover:not(:disabled) {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.ingest-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.message {
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.message.error {
+    background: #7f1d1d;
+    color: #fca5a5;
+    border: 1px solid #991b1b;
+}
+
+.message.success {
+    background: #14532d;
+    color: #86efac;
+    border: 1px solid #166534;
+}
