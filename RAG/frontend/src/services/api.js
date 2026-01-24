@@ -13,6 +13,14 @@ const api = axios.create({
 api.interceptors.response.use(
     (response) => response,
     (error) => {
+        // Check if the backend server is not running
+        if (error.code === 'ERR_NETWORK' || error.code === 'ECONNREFUSED' || !error.response) {
+            const errorMessage = '❌ Backend server is not running. Please start the backend server.';
+            console.error('API Error:', errorMessage);
+            throw new Error(errorMessage);
+        }
+
+        // Handle other API errors
         const errorMessage = error.response?.data?.detail || error.message || 'An error occurred';
         console.error('API Error:', errorMessage);
         throw new Error(errorMessage);
